@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-mono text-white bg-black;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-green-400 outline-offset-2;
+  }
+
+  /* Links */
+  a {
+    @apply text-green-400 no-underline transition-colors duration-200;
+  }
+  
+  a:hover {
+    @apply text-green-300 underline;
+  }
+
+  /* Buttons */
+  button {
+    @apply font-mono text-base leading-normal m-0 cursor-pointer border-0 bg-transparent;
+  }
+  
+  button:disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
+
