@@ -95,10 +95,10 @@ function App() {
               </svg>
             </div>
             <div>
-              <h1 className="text-xl font-semibold text-white uppercase tracking-wide">
+              <h1 className=" text-base sm:text-xl font-semibold text-white uppercase tracking-wide">
                 GitHub Repo Search
               </h1>
-              <p className="text-sm text-gray-400 uppercase tracking-wide">
+              <p className="text-xs sm:text-sm text-gray-400 uppercase tracking-wide">
                 Repository Explorer
               </p>
             </div>
@@ -115,17 +115,17 @@ function App() {
 
       <main className="flex-1 max-w-6xl w-full mx-auto pb-8  border-r border-l border-b border-gray-700 border-dashed">
         {/* About Section */}
-        <div className="mb-12 px-6 py-12  border-b border-gray-700 border-dashed">
-          <p className="text-white text-lg mb-4 ">
+        <div className="mb-12 px-6 py-8 sm:py-12  border-b border-gray-700 border-dashed">
+          <p className="text-white sm:text-lg mb-4 ">
             Hello, I'm  <span className="font-bold text-green-400">Repository Explorer</span>.
           </p>
-          <p className="text-gray-300 leading-relaxed mb-6">
+          <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
             A  tool that searches and bookmarks GitHub repositories. 
             I help  discover standout projects by blending search efficiency with smart organization – 
             making development workflow better.
           </p>
           <div className=" pt-6">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400  text-sm">
               Built with <span className="text-green-400">React</span>, <span className="text-green-400">TypeScript</span>, 
               and <span className="text-green-400">TailwindCSS</span>
             </p>

@@ -28,12 +28,12 @@ export const RepositoryCard = memo<RepositoryCardProps>(
     }
 
     return (
-      <article className="bg-gray-900/30 border border-dashed border-gray-700 rounded-lg p-6 transition-all duration-200 hover:shadow-lg hover:border-green-400 hover:shadow-green-400/10">
+      <article className="bg-gray-900/30 shrink border  border-dashed border-gray-700 rounded-lg p-4 md:p-6 transition-all duration-200 hover:shadow-lg hover:border-green-400 hover:shadow-green-400/10">
         <div className="flex gap-4 mb-4 flex-wrap">
           <img
             src={owner.avatar_url}
             alt={`${owner.login} avatar`}
-            className="w-12 h-12 rounded-md flex-shrink-0 border border-border"
+            className="w-12 h-12 rounded-md shrink border border-border"
             loading="lazy"
           />
           <div className="flex-1 min-w-0">

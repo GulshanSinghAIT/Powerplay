@@ -16,7 +16,7 @@ export const SearchInput = memo<SearchInputProps>(
       <div className="relative mb-6">
         <input
           type="text"
-          className="w-full py-4 px-6 pl-12 text-base border-2 focus:outline-none border-gray-700  rounded-lg bg-gray-900/30 text-white transition-all duration-200 hover:border-gray-500  placeholder:text-gray-500 font-mono"
+          className="w-full py-3 sm:py-4 px-6 pl-12 text-base border-2 focus:outline-none border-gray-700  rounded-lg bg-gray-900/30 text-white transition-all duration-200 hover:border-gray-500  placeholder:text-gray-500 font-mono"
           placeholder="Search GitHub repositories..."
           value={value}
           onChange={e => onChange(e.target.value)}
