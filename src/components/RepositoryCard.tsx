@@ -28,33 +28,31 @@ export const RepositoryCard = memo<RepositoryCardProps>(
     }
 
     return (
-      <article className="bg-gray-900/30 shrink border  border-dashed border-gray-700 rounded-lg p-4 md:p-6 transition-all duration-200 hover:shadow-lg hover:border-green-400 hover:shadow-green-400/10">
-        <div className="flex gap-4 mb-4 flex-wrap">
+      <article className="repo-card bg-gray-900/30 border border-dashed border-gray-700 rounded-lg p-4 md:p-6 transition-all duration-200 hover:shadow-lg hover:border-green-400 hover:shadow-green-400/10">
+        <div className="flex gap-4 mb-4 w-full">
           <img
             src={owner.avatar_url}
             alt={`${owner.login} avatar`}
-            className="w-12 h-12 rounded-md shrink border border-border"
+            className="w-12 h-12 rounded-md shrink-0 border border-gray-600"
             loading="lazy"
           />
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 overflow-hidden">
             <a
               href={html_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg font-semibold text-green-400 block mb-1 break-words hover:underline font-mono"
+              className="text-lg font-semibold text-green-400 block mb-1 break-all hover:underline font-mono"
             >
               {full_name}
             </a>
-            <p className="text-sm text-gray-300 leading-relaxed overflow-hidden font-mono" style={{
-              display: '-webkit-box',
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: 'vertical'
-            }}>
-              {description || 'No description provided'}
-            </p>
+            <div className="relative">
+              <p className="repo-description text-sm text-gray-300 font-mono">
+                {description || 'No description provided'}
+              </p>
+            </div>
           </div>
           <button
-            className={`flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-md transition-all duration-200 hover:bg-gray-800 hover:scale-105 order-first md:order-none ml-auto md:ml-0 ${
+            className={`shrink-0 w-10 h-10 flex items-center justify-center rounded-md transition-all duration-200 hover:bg-gray-800 hover:scale-105 ${
               isBookmarked ? 'text-yellow-400' : 'text-gray-500'
             }`}
             onClick={handleBookmarkClick}

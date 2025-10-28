@@ -52,5 +52,28 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-500;
   }
+
+  /* Repository card text overflow prevention */
+  .repo-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.4;
+  }
+
+  /* Ensure cards don't overflow their containers */
+  .repo-card {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
 }
 

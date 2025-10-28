@@ -15,7 +15,7 @@ interface RepositoryListProps {
 export const RepositoryList = memo<RepositoryListProps>(
   ({ repositories, isBookmarked, onToggleBookmark }) => {
     return (
-      <div className="grid gap-6">
+      <div className="grid gap-6 w-full max-w-full overflow-hidden">
         {repositories.map(repo => (
           <RepositoryCard
             key={repo.id}
